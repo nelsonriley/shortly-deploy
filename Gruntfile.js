@@ -112,7 +112,7 @@ module.exports = function(grunt) {
     'jshint',
     'concat',
     'uglify',
-    'mochaTest'
+    // 'mochaTest'
     ]);
 
   grunt.registerTask('upload', function(n) {
@@ -123,9 +123,14 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('deploy', [
-    // add your deploy tasks here
-  ]);
+  grunt.registerTask('deploy', function(n) {
+    if (grunt.option('prod')){
+      grunt.task.run([
+        'build',
+        'upload:prod'
+        ]);
+    }
+  });
 
 
 };
