@@ -1,3 +1,4 @@
+// mongodb://MongoLab-i:cVh9wgoCunTD9vdx1ViKiduRv2V2b3RrcukZeXsv.sY-@ds050077.mongolab.com:50077/MongoLab-i
 module.exports = function(grunt) {
 
   grunt.initConfig({

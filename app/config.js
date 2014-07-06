@@ -1,5 +1,52 @@
-var Bookshelf = require('bookshelf');
+var Mongoose = require('mongoose');
+var Schema = Mongoose.Schema;
+var crypto = require('crypto');
 var path = require('path');
+var Promise = require('bluebird');
+var Bookshelf = require('bookshelf');
+
+Mongoose.connect('mongodb://MongoLab-i:cVh9wgoCunTD9vdx1ViKiduRv2V2b3RrcukZeXsv.sY-@ds050077.mongolab.com:50077/MongoLab-i');
+//mongodb://localhost/shortly
+// var db = Mongoose.connection;
+
+// var UserSchema = new Schema({
+//   username: String,
+//   password: String,
+//   createdAt: {type: Date, default: Date.now()}
+// });
+
+
+// var UrlSchema = new Schema({
+//   url: String,
+//   base_url: String,
+//   code: String,
+//   title: String,
+//   visits: Number,
+//   createdAt: {type: Date, default: Date.now()},
+//   updatedAt: {type: Date}
+// });
+
+// hashPassword: function(username, password){
+//   var cipher = Promise.promisify(bcrypt.hash);
+//   return cipher(password, null, null).bind(this);
+
+// }
+
+// UsersSchema.pre('save', function(next) {
+//   var user = this;
+//   hashPassword(user.username, user.password)
+//     .then(function(hash) {
+//       user.password = hash;
+//       next();
+//     });
+// });
+
+// modules.exports.url = Mongoose.model('Url', UrlSchema);
+// modules.exports.user = Mongoose.model('User', UserSchema);
+
+
+
+
 
 var db = Bookshelf.initialize({
   client: 'sqlite3',

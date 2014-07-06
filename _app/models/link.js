@@ -1,8 +1,5 @@
 var db = require('../config');
 var crypto = require('crypto');
-var Link = require('../config').url;
-
-
 
 var Link = db.Model.extend({
   tableName: 'urls',
